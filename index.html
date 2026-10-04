@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-theme="berry-cream">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Berry Vibes Studio Cozy Core Diet interactive website">
+<title>Today · Berry Vibes CCD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="" data-page="index">
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div><div class="ambient ambient-c"></div>
+<nav class="top-nav"><a class="brand" href="index.html"><span class="brand-orb">BV</span><span>BERRY VIBES × CCD</span></a><div class="nav-scroll"><a class="nav-link active" href="index.html">TODAY</a><a class="nav-link" href="foods.html">FOOD</a><a class="nav-link" href="recipes.html">RECIPES</a><a class="nav-link" href="sotd.html">SOTD</a><a class="nav-link" href="exercise.html">MOVE</a><a class="nav-link" href="fasting.html">FASTING</a><a class="nav-link" href="restaurants.html">RESTAURANTS</a><a class="nav-link" href="battle.html">BATTLE</a><a class="nav-link" href="facts.html">FACTS</a><a class="nav-link" href="calendar.html">CALENDAR</a><a class="nav-link" href="profile.html">PROFILE</a><a class="nav-link" href="about.html">ABOUT</a></div><a class="nav-auth" data-auth-link href="login.html">SIGN IN</a></nav>
+<main class="page-shell">
+<section class="dashboard-hero kinetic-stage">
+  <div class="hero-copy">
+    <p class="eyebrow" id="dateLabel">TODAY</p>
+    <h1 id="greeting">GOOD MORNING, DANIELLE ✨</h1>
+    <p class="hero-sub">YOUR COZY CORE DIET CONTROL ROOM — LOG, MIX, MOVE, COMPARE, AND KEEP THE DAY VISUAL.</p>
+    <div class="hero-actions"><a class="btn primary" href="foods.html">LOG FOOD</a><a class="btn ghost" href="recipes.html">OPEN RECIPE LAB</a></div>
+  </div>
+  <div class="orbit-scene" aria-hidden="true"><div class="orbit-ring ring-1"></div><div class="orbit-ring ring-2"></div><div class="float-chip chip-a">🥞</div><div class="float-chip chip-b">💧</div><div class="float-chip chip-c">🚶🏽‍♀️</div><div class="float-chip chip-d">🍪</div><div class="core-orb"><span>CCD</span><small>PLAY MODE</small></div></div>
+</section>
+<section class="metric-ribbon" id="todayMetrics"></section>
+<section class="two-col dashboard-grid">
+  <article class="glass-card tilt-card"><div class="section-kicker">HORIZONTAL MACRO VIEW</div><h2>MACROS SO FAR</h2><div id="macroBars" class="bar-stack"></div></article>
+  <article class="glass-card tilt-card"><div class="section-kicker">HORIZONTAL FOOD PYRAMID</div><h2>CCD FOOD PYRAMID</h2><div id="pyramidBars" class="bar-stack"></div></article>
+</section>
+<section class="three-col">
+  <article class="glass-card"><div class="section-kicker">WATER</div><h2>HYDRATION</h2><div class="water-stack"><div class="water-visual" id="waterVisual"></div><div><strong id="waterCount">0</strong><span>BOTTLES</span></div></div><div class="segmented"><button data-water="1">+1</button><button data-water="2">+2</button><button data-water="-1">−1</button></div></article>
+  <article class="glass-card"><div class="section-kicker">MOVEMENT STAYS SEPARATE</div><h2>MOVE BURN</h2><div class="big-number" id="burnToday">0</div><p>KCAL ESTIMATED FROM TODAY'S LOGGED MOVEMENT.</p><a href="exercise.html" class="text-link">OPEN MOVEMENT →</a></article>
+  <article class="glass-card"><div class="section-kicker">FASTING WINDOW</div><h2>LAST FAST</h2><div class="big-number smallish" id="fastSummary">—</div><p id="fastMeta">NO FAST LOGGED YET.</p><a href="fasting.html" class="text-link">LOG FAST →</a></article>
+</section>
+<section class="glass-card timeline-card"><div class="section-row"><div><div class="section-kicker">TODAY'S STORY</div><h2>LOG TIMELINE</h2></div><a class="btn tiny ghost" href="calendar.html">CALENDAR</a></div><div id="timeline" class="timeline"></div></section>
+<section class="glass-card"><div class="section-row"><div><div class="section-kicker">REAL FOOD PHOTOGRAPHY</div><h2>QUICK FOOD PORTALS</h2></div><a class="text-link" href="foods.html">SEE ALL →</a></div><div id="photoPortal" class="photo-grid"></div></section>
+<section class="glass-card moving-gallery-card"><div class="section-row"><div><div class="section-kicker">MOVING IMAGE GALLERY</div><h2>COZY CCD SCROLL</h2></div><a class="text-link" href="foods.html">OPEN FOOD LOG →</a></div><div class="moving-gallery-shell"><div id="movingGalleryTrackHome" class="moving-gallery-track"></div></div></section>
+<footer class="ccd-footer"><strong>LET’S MAKE...</strong><span>THE NEXT COZY THING 😋✨</span></footer>
+</main>
+<div id="toast" class="toast" aria-live="polite"></div>
+<script src="config.js"></script><script src="data.js"></script><script src="script.js"></script>
+</body></html>

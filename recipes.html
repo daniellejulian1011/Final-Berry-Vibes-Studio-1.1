@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-theme="berry-cream">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Berry Vibes Studio Cozy Core Diet interactive website">
+<title>Recipes · Berry Vibes CCD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="" data-page="recipes">
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div><div class="ambient ambient-c"></div>
+<nav class="top-nav"><a class="brand" href="index.html"><span class="brand-orb">BV</span><span>BERRY VIBES × CCD</span></a><div class="nav-scroll"><a class="nav-link" href="index.html">TODAY</a><a class="nav-link" href="foods.html">FOOD</a><a class="nav-link active" href="recipes.html">RECIPES</a><a class="nav-link" href="sotd.html">SOTD</a><a class="nav-link" href="exercise.html">MOVE</a><a class="nav-link" href="fasting.html">FASTING</a><a class="nav-link" href="restaurants.html">RESTAURANTS</a><a class="nav-link" href="battle.html">BATTLE</a><a class="nav-link" href="facts.html">FACTS</a><a class="nav-link" href="calendar.html">CALENDAR</a><a class="nav-link" href="profile.html">PROFILE</a><a class="nav-link" href="about.html">ABOUT</a></div><a class="nav-auth" data-auth-link href="login.html">SIGN IN</a></nav>
+<main class="page-shell">
+<section class="page-head"><p class="eyebrow">RECIPE VAULT + PLAYABLE LAB</p><h1>212 CCD RECIPES, ONE VERY EXTRA MIXING LAB 🧪🥞</h1><p>INGREDIENTS STAY VERTICAL. MACROS + PYRAMID STAY HORIZONTAL.</p></section>
+<section class="glass-card"><div class="search-row"><input id="recipeSearch" class="input" placeholder="SEARCH RECIPE VAULT"><select id="recipeGroup" class="input"><option value="">ALL GROUPS</option></select></div><div id="recipeGrid" class="recipe-grid"></div></section>
+<section class="lab-grid">
+ <article class="glass-card lab-card"><div class="section-kicker">PLAYABLE RECIPE BUILDER LAB</div><h2>DROP INGREDIENTS INTO THE BOWL</h2><p>CLICK PANTRY TILES, SET AMOUNTS, THEN MIX. NUTRITION CALCULATES FROM THE PANTRY DATABASE.</p><div id="pantryDeck" class="pantry-deck"></div></article>
+ <article class="glass-card lab-bowl-card"><div class="mixing-rig"><div class="bowl-3d"><span>🥣</span><div id="ingredientParticles"></div></div><div class="whisk">🥄</div></div><div id="labIngredients" class="vertical-ingredients"></div><div id="labMacros" class="bar-stack"></div><button id="mixRecipeBtn" class="btn primary full">MIX THE RECIPE ✨</button><button id="clearLabBtn" class="btn ghost full">CLEAR BOWL</button></article>
+</section>
+<section class="glass-card"><div class="section-kicker">TSP / TBSP / CUP NUTRITION LAB</div><h2>CHECK A PANTRY INGREDIENT BY KITCHEN UNIT</h2><p>THIS UNIT CALCULATOR USES THE BUILT-IN PANTRY VALUES. COMPLETE RECIPES USE THE SERVING SLIDER IN THEIR RECIPE CARD.</p><div class="form-grid"><select id="unitIngredient" class="input"></select><select id="unitType" class="input"><option value="TSP">TSP</option><option value="TBSP">TBSP</option><option value="CUP">CUP</option></select></div><label class="field-label">QUANTITY <span id="unitQtyLabel">1×</span></label><input id="unitQty" type="range" min="0.25" max="4" step="0.25" value="1"><div id="unitNutrition" class="mini-macros"></div></section>
+<section class="glass-card"><div class="section-kicker">UPLOAD A RECIPE CARD</div><h2>SAVE A PHOTO OF A MODIFIED OR ORIGINAL CARD</h2><div class="form-grid"><input id="recipeCardTitle" class="input" placeholder="CARD TITLE"><label class="upload-zone">🗂️ CHOOSE RECIPE CARD IMAGE<input id="recipeCardUpload" type="file" accept="image/*"></label><button id="saveRecipeCardBtn" class="btn secondary">SAVE CARD</button></div><div id="savedRecipeCards" class="photo-grid compact"></div></section>
+<dialog id="recipeDialog" class="recipe-dialog"><button class="dialog-close" data-close-dialog>×</button><div id="recipeDialogContent"></div></dialog>
+<footer class="ccd-footer"><strong>LET’S MAKE...</strong><span>SOMETHING COZY, FLUFFY, OR RIDICULOUSLY CHOCOLATEY 😋</span></footer>
+</main>
+<div id="toast" class="toast" aria-live="polite"></div>
+<script src="config.js"></script><script src="data.js"></script><script src="script.js"></script>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-theme="berry-cream">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Berry Vibes Studio Cozy Core Diet interactive website">
+<title>Calendar · Berry Vibes CCD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="" data-page="calendar">
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div><div class="ambient ambient-c"></div>
+<nav class="top-nav"><a class="brand" href="index.html"><span class="brand-orb">BV</span><span>BERRY VIBES × CCD</span></a><div class="nav-scroll"><a class="nav-link" href="index.html">TODAY</a><a class="nav-link" href="foods.html">FOOD</a><a class="nav-link" href="recipes.html">RECIPES</a><a class="nav-link" href="sotd.html">SOTD</a><a class="nav-link" href="exercise.html">MOVE</a><a class="nav-link" href="fasting.html">FASTING</a><a class="nav-link" href="restaurants.html">RESTAURANTS</a><a class="nav-link" href="battle.html">BATTLE</a><a class="nav-link" href="facts.html">FACTS</a><a class="nav-link active" href="calendar.html">CALENDAR</a><a class="nav-link" href="profile.html">PROFILE</a><a class="nav-link" href="about.html">ABOUT</a></div><a class="nav-auth" data-auth-link href="login.html">SIGN IN</a></nav>
+<main class="page-shell">
+<section class="page-head"><p class="eyebrow">INTERACTIVE CALENDAR</p><h1>YOUR CCD MONTH, VISUALLY 📅</h1><p>FOOD, SOTD, MOVEMENT, FASTING, WATER, AND RESTAURANT LOGS APPEAR ON THEIR DATES.</p></section>
+<section class="glass-card calendar-shell"><div class="calendar-head"><button id="calPrev" class="btn tiny ghost" type="button" aria-label="Previous month">←</button><h2 id="calTitle">LOADING MONTH…</h2><button id="calNext" class="btn tiny ghost" type="button" aria-label="Next month">→</button></div><div class="calendar-legend"><span><i class="legend-dot food"></i> FOOD</span><span><i class="legend-dot move"></i> MOVE</span><span><i class="legend-dot fast"></i> FAST</span><span><i class="legend-dot restaurant"></i> RESTAURANT</span><span><i class="legend-dot water"></i> WATER</span></div><div class="weekdays"><span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span></div><div id="calendarGrid" class="calendar-grid"><div class="calendar-loading">BUILDING YOUR MONTH… 📅</div></div></section>
+<section class="glass-card"><div class="section-kicker">SELECTED DAY</div><h2 id="selectedDayTitle">PICK A DATE</h2><div id="selectedDayLogs" class="mini-log-grid"></div></section>
+<footer class="ccd-footer"><strong>LET’S MAKE...</strong><span>THE MONTH FEEL LIKE A LITTLE STORYBOOK 📖✨</span></footer>
+</main>
+<div id="toast" class="toast" aria-live="polite"></div>
+<script src="config.js"></script><script src="data.js"></script><script src="script.js"></script>
+<script>
+(function(){
+  function fallbackCalendar(){
+    var grid=document.getElementById('calendarGrid');
+    var title=document.getElementById('calTitle');
+    if(!grid || grid.querySelector('.calendar-day')) return;
+    var cursor=new Date(); cursor.setDate(1);
+    function draw(){
+      var y=cursor.getFullYear(),m=cursor.getMonth();
+      var first=new Date(y,m,1),start=new Date(y,m,1-first.getDay());
+      title.textContent=cursor.toLocaleDateString(undefined,{month:'long',year:'numeric'}).toUpperCase();
+      var today=new Date(), todayIso=today.getFullYear()+'-'+String(today.getMonth()+1).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0');
+      grid.innerHTML=Array.from({length:42},function(_,i){
+        var d=new Date(start); d.setDate(start.getDate()+i);
+        var iso=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+        return '<button type="button" class="calendar-day '+(d.getMonth()!==m?'muted ':'')+(iso===todayIso?'selected':'')+'" data-fallback-date="'+iso+'"><strong>'+d.getDate()+'</strong><div class="day-label">'+(iso===todayIso?'TODAY':'')+'</div></button>';
+      }).join('');
+      grid.querySelectorAll('[data-fallback-date]').forEach(function(b){b.addEventListener('click',function(){document.getElementById('selectedDayTitle').textContent=new Date(b.dataset.fallbackDate+'T12:00:00').toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'}).toUpperCase();document.getElementById('selectedDayLogs').innerHTML='<div class="empty-state">NO SAVED LOGS FOUND FOR THIS DATE.</div>';});});
+    }
+    document.getElementById('calPrev').addEventListener('click',function(){cursor.setMonth(cursor.getMonth()-1);draw();});
+    document.getElementById('calNext').addEventListener('click',function(){cursor.setMonth(cursor.getMonth()+1);draw();});
+    draw();
+  }
+  window.addEventListener('load',function(){setTimeout(fallbackCalendar,120);});
+})();
+</script>
+</body></html>

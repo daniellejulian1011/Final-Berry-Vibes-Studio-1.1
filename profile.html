@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" data-theme="berry-cream">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Berry Vibes Studio Cozy Core Diet interactive website">
+<title>Profile · Berry Vibes CCD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="" data-page="profile">
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div><div class="ambient ambient-c"></div>
+<nav class="top-nav"><a class="brand" href="index.html"><span class="brand-orb">BV</span><span>BERRY VIBES × CCD</span></a><div class="nav-scroll"><a class="nav-link" href="index.html">TODAY</a><a class="nav-link" href="foods.html">FOOD</a><a class="nav-link" href="recipes.html">RECIPES</a><a class="nav-link" href="sotd.html">SOTD</a><a class="nav-link" href="exercise.html">MOVE</a><a class="nav-link" href="fasting.html">FASTING</a><a class="nav-link" href="restaurants.html">RESTAURANTS</a><a class="nav-link" href="battle.html">BATTLE</a><a class="nav-link" href="facts.html">FACTS</a><a class="nav-link" href="calendar.html">CALENDAR</a><a class="nav-link active" href="profile.html">PROFILE</a><a class="nav-link" href="about.html">ABOUT</a></div><a class="nav-auth" data-auth-link href="login.html">SIGN IN</a></nav>
+<main class="page-shell">
+<section class="page-head"><p class="eyebrow">PROFILE</p><h1>MAKE THE CCD SPACE YOURS 💗</h1><p>CHOOSE A COMPLETE VISUAL THEME AND EDIT YOUR PROFILE DETAILS.</p></section>
+<section class="two-col wide-left"><article class="glass-card"><div class="profile-photo-wrap"><img id="profilePhotoPreview" class="profile-photo" alt="Profile"><label class="upload-zone">📸 CHANGE PROFILE PHOTO<input id="profilePhotoInput" type="file" accept="image/*"></label></div><div class="form-grid"><input id="profileName" class="input" placeholder="DISPLAY NAME"><input id="profileHeight" class="input" type="text" inputmode="text" placeholder="HEIGHT (FT) · EXAMPLE 5'2"><input id="profileWeight" class="input" type="number" min="1" step="0.1" placeholder="WEIGHT (LB)"><textarea id="profileReason" class="input textarea" placeholder="WHY ARE YOU USING THIS WEBSITE?"></textarea></div><button id="saveProfileBtn" class="btn primary full">SAVE PROFILE</button></article><aside class="glass-card"><div class="section-kicker">WEBSITE APPEARANCE</div><h2>CHOOSE A FULL THEME</h2><div id="themeDeck" class="theme-deck"><button data-theme-choice="berry-cream" class="theme-card berry">BERRY CREAM</button><button data-theme-choice="lilac-milk" class="theme-card lilac">LILAC MILK</button><button data-theme-choice="peach-soda" class="theme-card peach">PEACH SODA</button><button data-theme-choice="aqua-pop" class="theme-card aqua">AQUA POP</button><button data-theme-choice="cocoa-rose" class="theme-card cocoa">COCOA ROSE</button></div><div class="section-kicker gap-top">ACCOUNT</div><div id="accountStatus" class="account-status"></div><button id="signOutBtn" class="btn ghost full">SIGN OUT</button></aside></section>
+<section class="glass-card moving-gallery-card"><div class="section-row"><div><div class="section-kicker">MOVING GALLERY</div><h2>CCD MOMENTS IN MOTION</h2></div><span class="gallery-note">AUTO-SCROLLING FOOD GALLERY ✨</span></div><div class="moving-gallery-shell"><div id="movingGalleryTrack" class="moving-gallery-track"></div></div></section>
+<footer class="ccd-footer"><strong>LET’S MAKE...</strong><span>THE WHOLE THING FEEL LIKE YOU ✨</span></footer>
+</main>
+<div id="toast" class="toast" aria-live="polite"></div>
+<script src="config.js"></script><script src="data.js"></script><script src="script.js"></script>
+</body></html>
