@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": "4e82e565-00cd-4b27-a198-d76825d87499",
+      "username": "PreviewDanielle1026",
+      "email": "preview1026@example.com",
+      "passwordHash": "6e9394d49872f44ea8c2593776bb52b3:036e9fad75e7ded28880823e66fa0a4261eff51a0ad28a837089bc22e42fdd35dca14c18ff2f1a55373795861162c0f32d82870a5d4cf6859a7e19ef90b1e2b6",
+      "createdAt": "2026-10-04T20:22:09.587Z",
+      "profile": {
+        "name": "PreviewDanielle1026",
+        "height": 62,
+        "weight": 117.4,
+        "reason": "",
+        "photo": ""
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "token": "_b0cUaP1SBqfJs2WuwmD9ex9gdKLUeqQeMHLbRGfb64",
+      "userId": "4e82e565-00cd-4b27-a198-d76825d87499",
+      "expiresAt": 1793737329588
+    },
+    {
+      "token": "RKTzA4QtEpQ9cXoWlXGHUf-IPT9P1dsMa74jxKezSxo",
+      "userId": "4e82e565-00cd-4b27-a198-d76825d87499",
+      "expiresAt": 1793737342132
+    }
+  ],
+  "resets": [],
+  "logs": [],
+  "uploads": []
+}
